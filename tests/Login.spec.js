@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-test.use({ viewport: { width: 1200, height: 500 } });
 
 test('Login page title', async ({ page }) => {
 
@@ -21,7 +20,7 @@ test('Login page title', async ({ page }) => {
     await expect(page).toHaveURL(/login/);
 });
 
-test.only('Invalid Login test', async ({ page }) => {
+test('Invalid Login test', async ({ page }) => {
 
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     await page.getByPlaceholder('Username').fill('Admin', { delay: 1000 });

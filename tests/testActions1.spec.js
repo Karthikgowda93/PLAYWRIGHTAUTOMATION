@@ -6,7 +6,7 @@ test('Google title', async ({ page }) => {
     expect(title).toBe('Google');
 });
 
-test('Skipped test case example', async ({ }) => {
+test('Incognito example', async ({ }) => {
 
     // Run browser in incognito mode and have to remove 'page' inside async ialog above
     const browser = await chromium.launch();
